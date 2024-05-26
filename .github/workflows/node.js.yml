@@ -82,7 +82,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: use Node.js ${{ matrix.node-version }}
-        uses: ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with: 
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
