@@ -71,5 +71,5 @@ jobs:
     - run: npm i
     - run: npm link
     - run: rcli new test
-    - run: cd test
-    - run: rcli dev
+    # - run: cd test
+    - run: cd test && rcli dev
