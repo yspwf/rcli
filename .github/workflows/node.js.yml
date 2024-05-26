@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm i
     - run: npm run cli
     # - run: rcli -h
     # - run: npm run build --if-present
