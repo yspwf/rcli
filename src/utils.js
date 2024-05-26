@@ -21,9 +21,9 @@ export const executeCommand = (projectPath, project, spinner) => {
     console.log('install success...')
     spinner.succeed(Chalk.green('create project successful!'));
     console.log(Chalk.blue(`Done! you can start by running:`));
-    console.log(chalk.blue.bold('cd ') + chalk.yellow(project));
-    console.log(chalk.blue.bold('npm run dev'));
-    console.log(chalk.blue.bold('npm run build'));
+    console.log(Chalk.blue.bold('cd ') + Chalk.yellow(project));
+    console.log(Chalk.blue.bold('npm run dev'));
+    console.log(Chalk.blue.bold('npm run build'));
   })
 }
 

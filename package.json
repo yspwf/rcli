@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cli": "webpack --config webpack.config.js --mode production"
+    "cli": "webpack --config webpack.config.js --mode production",
+    "dev": "rcli dev",
+    "build": "rcli build"
   },
   "bin": {
     "rcli": "./dist/bundle.js"
