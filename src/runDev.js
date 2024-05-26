@@ -13,6 +13,21 @@ const compiler = webpack(webpackConfig);
 
 const server = new webpackDevServer(devServerConfig, compiler);
 
-export const start = () => {
-  server.start();
+const stopServer = async () => {
+  console.log('Stopping server...');
+  await server.stop();
+};
+
+const runServer = () => {
+  return new Promise((resolve, reject) => {
+    console.log('Starting server...');
+    server.start();
+    resolve(true);
+  })
+};
+
+export const start = async() => {
+  if(await runServer()) {
+    setTimeout(stopServer, 10000);
+  }
 }
