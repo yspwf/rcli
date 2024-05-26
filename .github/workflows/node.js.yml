@@ -75,7 +75,7 @@ jobs:
     - run: cd test && rcli dev
 
   run_build_job:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix: 
         node-version: [18.x]
