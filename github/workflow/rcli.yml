@@ -1,0 +1,37 @@
+name: rcli job
+
+on:
+  push: 
+    branches: [master]
+
+jobs:
+  create new project:
+    name: create new project
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: run rcli new command
+        uses: echo "rcli new test"
+  
+  run dev:
+    name: run rcli dev command
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: run rcli dev command
+        uses: echo "rcli dev"
+
+  run build:
+    name: run rcli build command
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: run rcli build command
+        uses: echo "rcli build"
+      
