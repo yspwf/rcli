@@ -86,10 +86,10 @@ export const webpackConfig = {
     // new MiniCssExtractPlugin({
     //   filename: 'css/built.css'
     // })
-    // new MiniCssExtractPlugin({
-    //   filename: "[name].css",
-    //   chunkFilename: "[id].css",
-    // }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css",
+    }),
   ],
   // optimization: {
   //   minimize: true,
