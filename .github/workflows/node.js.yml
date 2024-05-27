@@ -72,7 +72,7 @@ jobs:
     - run: npm link
     - run: rcli new test
     # - run: cd test
-    - run: cd test && rcli dev
+    - run: cd test && rcli devCi
 
   run_build_job:
     runs-on: ubuntu-latest

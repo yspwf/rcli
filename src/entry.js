@@ -9,7 +9,7 @@ import ora from 'ora';
 
 import { createFolder, isExist, copyTemplate, executeCommand} from './utils';
 import { ROOT_PATH } from './constant';
-import { start } from './runDev';
+import { start, startCi } from './runDev';
 import { build } from './runBuild';
 
 
@@ -57,6 +57,12 @@ program.command('dev').action(() => {
 program.command('build').action(() => {
   // console.log('build');
   build();
+})
+
+
+program.command('devCi').action(() => {
+  // console.log('build');
+  startCi();
 })
 
 

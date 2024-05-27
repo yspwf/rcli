@@ -27,6 +27,10 @@ const runServer = () => {
 };
 
 export const start = async() => {
+  await runServer();
+}
+
+export const startCi = async() => {
   if(await runServer()) {
     setTimeout(stopServer, 10000);
   }
