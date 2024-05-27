@@ -20,18 +20,12 @@ program.command('new <projectName>').action(async (projectName) => {
   const projectPath = ROOT_PATH +'/'+ projectName;
 
   if(isExist(ROOT_PATH +'/'+ projectName)){
-    // const selectAnswer = prompt([{
-    //   type: 'confirm',
-    //   message: '是否重新创建项目',
-    //   name: 'reCreate'
-    // }]);
     const selectAnswer = await inquirer.prompt([{ 
       type: 'confirm',
       message: '是否重新创建项目',
       name: 'reCreate'
     }]);
 
-    //console.log("selectAnswer", selectAnswer)
     if(!selectAnswer.reCreate){
       return false;
     }
@@ -46,7 +40,6 @@ program.command('new <projectName>').action(async (projectName) => {
     copyTemplate(path.resolve(__dirname, 'template'), projectName);
     executeCommand(projectPath, projectName, spanner)
   }
-
 })
 
 program.command('dev').action(() => {
